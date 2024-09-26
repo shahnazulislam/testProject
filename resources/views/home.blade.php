@@ -18,10 +18,11 @@
                             </div>
                         </div>
                     </div>
-                    @else
+                @else
                     <div class="col-3 mt-3">
                         <div class="card">
-                            <img class="card-img-top" style="height: 240px" src="{{ asset($blog['image']) }}" alt="images">
+                            <img class="card-img-top" style="height: 240px" src="{{ asset($blog['image']) }}"
+                                alt="images">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $blog['title'] }}</h5>
                                 <p class="card-text">{{ $blog['details'] }}</p>
@@ -40,4 +41,11 @@
             @endforeach
         </div>
     </div>
+    @php
+    $data = 333;
+    @endphp
+    
+    @isset($data)
+        <div class="alart alart-success">Success</div>
+    @endisset
 @endsection
